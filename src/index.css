@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { @apply bg-slate-950 text-slate-100 antialiased; }
+.btn { @apply rounded bg-indigo-600 px-3 py-1.5 text-sm font-medium hover:bg-indigo-500 disabled:opacity-50; }
+.btn-ghost { @apply rounded border border-slate-700 px-2 py-1 text-xs hover:bg-slate-800; }
+.inp { @apply w-full rounded border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm outline-none focus:border-indigo-500; }
+.card { @apply rounded-lg border border-slate-800 bg-slate-900 p-4; }
+
+/* iPhone: bersagli touch più grandi e font >=16px (evita lo zoom automatico) */
+@media (max-width: 767px) {
+  .btn, .btn-ghost { min-height: 44px; min-width: 44px; }
+  .inp { min-height: 44px; font-size: 16px; }
+  textarea.inp { min-height: 0; }
+}
